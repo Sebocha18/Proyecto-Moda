@@ -3,15 +3,17 @@
     margin: 0%;
     padding: 0%;
 }
+p {
+    margin-bottom: 20px;
+  }
 body{
     background-color: #9999a1;
 }
 .titulo{
     text-align: center;
-    text-decoration: underline;
     text-overflow: ellipsis;
     font-size: 70px;
-    font-family: sans-serif;
+    font-family:serif;
 }
 .gif{
     width: 400px;
@@ -19,9 +21,10 @@ body{
     margin-left: 750px;
 }
 .pgif{
-    text-align: center;
     font-size: smaller;
     font-size: 20px;
+    text-align: center;
+    width: 100%;
 }
 .logoig{
     width: 12px;
@@ -32,11 +35,11 @@ body{
     margin-left: 100px;
 }
 .divfer{
-    height: 0px;
+    height: 10px;
     margin-left: 850px;
 }
 .divivan{
-    height: 0px;
+    height: 10px;
     margin-left: 1600px;
 }
 header {
@@ -44,7 +47,10 @@ header {
     justify-content: space-between;
     align-items: center;
     border: 1px solid black;
-    background-color: black;
+    background: rgba(0,0,0,0.9);
+    position: fixed;
+    z-index: 100;
+    width: 100%;
 }
 .barra{
     background-color: black;
@@ -65,4 +71,44 @@ header {
     width: 80px;
     height: 80px;
     margin: 5px;
+}
+.logoanimal{
+    width: 30px;
+    height: 30px;
+}
+.letra187{
+    text-shadow: black;
+    font-size: smaller;
+    font-size: 20px;
+}
+li {
+    list-style: none;
+}
+nav {
+    float: left; /* Desplazamos el nav hacia la izquierda */
+}
+
+nav ul {
+list-style: none;
+overflow: hidden; /* Limpiamos errores de float */
+}
+
+nav ul li {
+float: left;
+font-family: Arial, sans-serif;
+font-size: 16px;
+}
+
+nav ul li a {
+display: block; /* Convertimos los elementos a en elementos bloque para manipular el padding */
+padding: 20px;
+color: #fff;
+text-decoration: none;
+}
+
+nav ul li:hover {
+background: #66666e;
+}
+.contenido {
+padding-top: 80px;
 }
