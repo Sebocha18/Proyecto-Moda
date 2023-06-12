@@ -1,0 +1,195 @@
+@import 'bootstrap/bootstrap';
+@import 'bootstrap/variables';
+@import 'bootstrap/mixins';
+
+$font-primary: 'Poppins',Arial, sans-serif;
+$primary: #ffc6be;
+
+body{
+	font-family: $font-primary;
+	font-size: 14px;
+	line-height: 1.8;
+	font-weight: normal;
+	color: lighten($black, 50%);
+}
+a {
+	transition: .3s all ease;
+	color: $primary;
+	&:hover, &:focus {
+		text-decoration: none !important;
+		outline: none !important;
+		box-shadow: none;
+	}
+}
+button {
+	transition: .3s all ease;
+	&:hover, &:focus {
+		text-decoration: none !important;
+		outline: none !important;
+		box-shadow: none !important;
+	}
+}
+h1, h2, h3, h4, h5,
+.h1, .h2, .h3, .h4, .h5 {
+	line-height: 1.2;
+	font-weight: 400;
+	font-family: $font-primary;
+	color: $black;
+}
+
+.container{
+	// max-width: 980px;
+}
+
+.ftco-section{
+	padding: 7em 0;
+}
+
+.ftco-no-pt{
+	padding-top: 0;
+}
+.ftco-no-pb{
+	padding-bottom: 0;
+}
+//HEADING SECTION
+.heading-section{
+	font-size: 28px;
+}
+
+//COVER BG
+.img{
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+.btn{
+	@include media-breakpoint-down(md){
+		display: block;
+		width: 100%;
+	}
+}
+
+//OWL CAROUSEL
+.owl-carousel {
+	position: relative;
+	.owl-item {
+		opacity: 1;
+		&.active {
+			opacity: 1;
+		}
+	}
+	
+	.owl-nav {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		display: inline-block;
+		.owl-prev,
+		.owl-next {
+			position: absolute;
+			transform: translateY(-50%);
+			margin-top: 60px;
+			color: rgba(0,0,0,.2) !important;
+			@include transition(.7s);
+			p{
+				span,small{
+					display: block;
+					color: $black;
+					line-height: .8;
+					@include transition(.3s);
+				}
+			}
+			small{
+				text-transform: uppercase;
+			}
+			span {
+				line-height: 0;
+				&:before {
+					font-size: 40px;
+					@include transition(.3s);
+				}
+			}
+			opacity: 1;
+			&:hover{
+				small{
+					color: $primary;
+				}
+				span{
+					&:before{
+						color: $primary;
+					}
+				}
+			}
+		}
+		.owl-prev {
+			left: 50%;
+			margin-left: -35px;
+
+		}
+		.owl-next {
+			right: 50%;
+			margin-right: -35px;
+		}
+	}
+	.owl-dots {
+		text-align: center;
+		margin-top: 20px;
+		.owl-dot {
+			width: 10px;
+			height: 10px;
+			margin: 5px;
+			border-radius: 50%;
+			background: transparent;
+			position: relative;
+			border: 1px solid $black;
+			&:hover, &:focus{
+				outline: none !important;
+			}
+			&.active {
+				background: $primary;
+				border: 1px solid $primary;
+			}
+		}
+		@include media-breakpoint-up(lg){
+			position: absolute;
+			top: 0;
+			right: 0;
+			margin-top: 0;
+			margin-right: -40px;
+			.owl-dot{
+				display: block;
+			}
+		}
+	}
+} 
+
+.owl-carousel.owl-drag .owl-item {
+	-ms-touch-action: pan-y;
+	touch-action: pan-y;
+}
+
+//WORK
+.work-wrap{
+	.text,.img{
+		width: 50%;
+		@include media-breakpoint-down(sm){
+			width: 100%;
+		}
+	}
+	.img{
+		height: 700px;
+	}
+	.text{
+		background: lighten($primary,10%);
+		h2{
+			font-size: 60px;
+			font-weight: 800;
+			text-transform: uppercase;
+			@include media-breakpoint-down(md){
+				font-size: 40px;
+			}
+		}
+	}
+}
