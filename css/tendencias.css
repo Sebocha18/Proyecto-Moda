@@ -16,14 +16,41 @@ header {
 }
 .menu a {
     color:aliceblue;
-    text-decoration:underline;
     padding: 15px;
-    font-family:'Times New Roman', Times, serif;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-weight:lighter;
 }
 .menu {
     display: flex;
     list-style: none;
+}
+li {
+    list-style: none;
+}
+nav {
+    float: left; /* Desplazamos el nav hacia la izquierda */
+}
+
+nav ul {
+list-style: none;
+overflow: hidden; /* Limpiamos errores de float */
+}
+
+nav ul li {
+float: left;
+font-family: Arial, sans-serif;
+font-size: 16px;
+}
+
+nav ul li a {
+display: block; /* Convertimos los elementos a en elementos bloque para manipular el padding */
+padding: 20px;
+color: #fff;
+text-decoration: none;
+}
+
+nav ul li:hover {
+background: #66666e;
 }
 .logo {
     width: 80px;
@@ -31,24 +58,24 @@ header {
     margin: 5px;
 }
 .h1{
-    font-family:'Courier New', Courier, monospace;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 30px;
     width: 50px;
     height: 50px;
-    padding: 10px;
-    margin-top: 10px;
-    margin-left: 625px;
+    margin-top: 2%;
+    margin-left: 640px;
 }
 .fotos{
-    width: 400px;
-    height: 500px;
-    padding: 15px;
-    margin-left: 35px;
-    border-radius: 6%;
-    box-shadow: 10%;
+    width: 420px;
+    height: 510px;
+    margin-left: 25px;
+    border-radius: 7px;
+    transition: 0.3s;
+    object-fit: cover;
+    border-radius: 4px;
+    box-shadow: 0px 1px 10px;
+    cursor: pointer;
 }
-.centrado{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+.fotos:hover{
+    transform: scale(1.1);
+};
