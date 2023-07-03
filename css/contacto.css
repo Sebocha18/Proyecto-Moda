@@ -16,9 +16,10 @@ body{
     font-family:serif;
 }
 .gif{
-    width: 400px;
-    height: 400px;
-    margin-left: 750px;
+    width: 40%;
+    height: 30%;
+    text-align: center;
+    align-items: center;
 }
 .pgif{
     font-size: smaller;
@@ -30,18 +31,7 @@ body{
     width: 12px;
     height: 12px;
 }
-.divsebas{
-    height: 10px;
-    margin-left: 100px;
-}
-.divfer{
-    height: 10px;
-    margin-left: 850px;
-}
-.divivan{
-    height: 10px;
-    margin-left: 1600px;
-}
+
 header {
     display: flex;
     justify-content: space-between;
@@ -80,6 +70,11 @@ header {
     text-shadow: black;
     font-size: smaller;
     font-size: 20px;
+    background-color: #66666e;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
 }
 li {
     list-style: none;
@@ -109,6 +104,7 @@ text-decoration: none;
 nav ul li:hover {
 background: #66666e;
 }
+
 .contenido {
 padding-top: 80px;
 }
